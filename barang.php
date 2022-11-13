@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uzi Tailor | Transaksi</title>
+  <title>Uzi Tailor | Master Barang</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -74,7 +74,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link bg-danger">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-bold">UZI TAILOR</span>
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
     <!-- Sidebar -->
@@ -107,7 +107,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link active">
+            <a href="index.html" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Transaksi
@@ -123,7 +123,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="barang.php" class="nav-link">
+            <a href="barang.php" class="nav-link active">
               <i class="nav-icon fas fa-tshirt"></i>
               <p>
                 Master Barang
@@ -184,12 +184,15 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Transaksi</h1>
+            <h1 class="m-0">Master Barang</h1>
+            <br>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
+              Tambah</button>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item "><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Transaksi</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Master Barang</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -200,6 +203,60 @@
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"></h3>
+
+            <div class="card-tools">
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>Kode Barang</th>
+                  <th>Nama Barang</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php 
+                    //call koneksi.php
+                    include 'koneksi.php';
+                    //mysqli_query untuk menjalankan query
+                    $data = mysqli_query($koneksi,"select kode_barang, nama_barang from master_barang");
+                    //no
+                    $no = 1;
+                    //while untuk menampilkan data
+                    while($d = mysqli_fetch_array($data)){
+                ?>
+                <tr>
+                    <td><?php echo $d['kode_barang']; ?></td>
+                    <td><?php echo $d['nama_barang']; ?></td>
+                    <td>
+                        <a href="edit.php?kode_barang=<?php echo $d['kode_barang']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="hapus.php?kode_barang=<?php echo $d['kode_barang']; ?>" class="btn btn-danger">Hapus</a>
+                    </td>
+                </tr>
+                <?php 
+                    $no++;
+                    }
+                ?>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
       </div>
       <!-- /.container-fluid -->
     </div>
