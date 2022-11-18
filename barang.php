@@ -107,7 +107,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="index.php" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Transaksi
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="progress.html" class="nav-link">
+            <a href="progress.php" class="nav-link">
               <i class="nav-icon fa fa-shopping-basket"></i>
               <p>
                 Order on Progress
@@ -139,7 +139,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="riwayat.html" class="nav-link">
+            <a href="riwayat.php" class="nav-link">
               <i class="nav-icon fas fa-history"></i>
               <p>
                 Riwayat Transaksi
@@ -147,7 +147,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="laporan.html" class="nav-link">
+            <a href="laporan.php" class="nav-link">
               <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Laporan Penjualan
@@ -155,7 +155,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="akun.php" class="nav-link">
               <i class="nav-icon fas fa-user-alt"></i>
               <p>
                 Master Akun

@@ -107,7 +107,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="index.php" class="nav-link">
               <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Transaksi
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="progress.html" class="nav-link">
+            <a href="progress.php" class="nav-link">
               <i class="nav-icon fa fa-shopping-basket"></i>
               <p>
                 Order on Progress
@@ -139,7 +139,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="riwayat.html" class="nav-link">
+            <a href="riwayat.php" class="nav-link">
               <i class="nav-icon fas fa-history"></i>
               <p>
                 Riwayat Transaksi
@@ -147,7 +147,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="laporan.html" class="nav-link">
+            <a href="laporan.php" class="nav-link">
               <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Laporan Penjualan
@@ -155,7 +155,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="akun.php" class="nav-link">
               <i class="nav-icon fas fa-user-alt"></i>
               <p>
                 Master Akun
@@ -184,7 +184,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Master Barang</h1>
+            <h1 class="m-0">Data Pembeli</h1>
             <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">
               Tambah</button>
@@ -224,8 +224,9 @@
             <table class="table table-hover text-nowrap">
               <thead>
                 <tr>
-                  <th>Kode Barang</th>
-                  <th>Nama Barang</th>
+                  <th>Nama Pembeli</th>
+                  <th>Alamat</th>
+                  <th>No Hp</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -234,18 +235,19 @@
                     //call koneksi.php
                     include 'koneksi.php';
                     //mysqli_query untuk menjalankan query
-                    $data = mysqli_query($koneksi,"select kode_barang, nama_barang from master_barang");
+                    $data = mysqli_query($koneksi,"select id_pembeli, nama_pembeli, alamat, no_hp from data_pembeli");
                     //no
                     $no = 1;
                     //while untuk menampilkan data
                     while($d = mysqli_fetch_array($data)){
                 ?>
                 <tr>
-                    <td><?php echo $d['kode_barang']; ?></td>
-                    <td><?php echo $d['nama_barang']; ?></td>
+                    <td><?php echo $d['nama_pembeli']; ?></td>
+                    <td><?php echo $d['alamat']; ?></td>
+                    <td><?php echo $d['no_hp']; ?></td>
                     <td>
-                        <a href="edit.php?kode_barang=<?php echo $d['kode_barang']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="hapus.php?kode_barang=<?php echo $d['kode_barang']; ?>" class="btn btn-danger">Hapus</a>
+                        <a href="edit.php?kode_barang=<?php echo $d['id_pembeli']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="hapus.php?kode_barang=<?php echo $d['id_pembeli']; ?>" class="btn btn-danger">Hapus</a>
                     </td>
                 </tr>
                 <?php 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uzi Tailor | Laporan Penjualan</title>
+  <title>Uzi Tailor | Riwayat Transaksi</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -23,7 +23,7 @@
   * sidebar-collapse
   * sidebar-mini
 -->
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed accent-danger">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -70,9 +70,9 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-danger elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="index3.html" class="brand-link bg-danger">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -107,48 +107,56 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="index.php" class="nav-link">
+              <i class="nav-icon fas fa-shopping-cart"></i>
               <p>
                 Transaksi
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="progress.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="progress.php" class="nav-link">
+              <i class="nav-icon fa fa-shopping-basket"></i>
               <p>
                 Order on Progress
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="barang.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="barang.php" class="nav-link">
+              <i class="nav-icon fas fa-tshirt"></i>
               <p>
                 Master Barang
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="riwayat.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="pembeli.php" class="nav-link">
+              <i class="nav-icon fas fa-user-alt"></i>
+              <p>
+                Data Pembeli
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="riwayat.php" class="nav-link active">
+              <i class="nav-icon fas fa-history"></i>
               <p>
                 Riwayat Transaksi
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="laporan.html" class="nav-link active">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="laporan.php" class="nav-link">
+              <i class="nav-icon fas fa-chart-line"></i>
               <p>
                 Laporan Penjualan
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="akun.php" class="nav-link">
+              <i class="nav-icon fas fa-user-alt"></i>
               <p>
                 Master Akun
               </p>
@@ -156,7 +164,7 @@
           </li>
           <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-cog"></i>
               <p>
                 Konfigurasi
               </p>
@@ -194,7 +202,7 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Responsive Hover Table</h3>
+            
 
             <div class="card-tools">
               <div class="input-group input-group-sm" style="width: 150px;">
@@ -296,8 +304,6 @@
 
 <!-- OPTIONAL SCRIPTS -->
 <script src="plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard3.js"></script>
 </body>
